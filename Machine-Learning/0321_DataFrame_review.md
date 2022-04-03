@@ -1098,18 +1098,6 @@ display(result_df)
 
 
 
-```python
-여기서부터 복습 진행~~~ (강의 참고)
-```
-
-
-      Input In [14]
-        여기서부터 복습 진행~~~ (강의 참고)
-              ^
-    SyntaxError: invalid syntax
-    
-
-
 ## 결합하려는 기준 column과 다른 DataFrame의 행 index 결합하기
 
 
