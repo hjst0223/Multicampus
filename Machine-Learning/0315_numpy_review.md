@@ -226,7 +226,7 @@ print(arr)
      [7. 7. 7.]]
     
 
-# shape을 직접 지정하지 않고 다른 ndarray의 shape을 이용해서 ndarray를 생성할 수 있다.
+## shape을 직접 지정하지 않고 다른 ndarray의 shape을 이용해서 ndarray를 생성할 수 있다.
 
 ### np.ones_like(), np.zeros_like(), np.full_like(), np.empty_like()
 
@@ -320,7 +320,7 @@ print(arr)
      112. 116. 120.]
     
 
-# 랜덤값을 이용해서 ndarray를 만들어 내는 방법
+# 랜덤값을 이용해서 ndarray를 만들어 내는 방법 🤔
 
 ### np.random.normal(), np.random.rand(), np.random.randn()
 ### np.random.randint(), np.random.random()
