@@ -230,10 +230,7 @@ sess = tf.Session()
 
 onehot_train_t_data = sess.run(tf.one_hot(train_t_data, depth=10))
 onehot_test_t_data = sess.run(tf.one_hot(test_t_data, depth=10))
-```
-
-    WARNING:tensorflow:From C:\Users\Public\Documents\ESTsoft\CreatorTemp\ipykernel_17156\1037498019.py:1: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
-    
+```    
     
 
 ## Tensorflow 1.15로 구현하기
@@ -273,12 +270,7 @@ for step in range(1000):
         print(f'loss 값 : {loss_val}')
 ```
 
-    WARNING:tensorflow:From C:\Users\Public\Documents\ESTsoft\CreatorTemp\ipykernel_17156\2745053351.py:2: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
-    
-    WARNING:tensorflow:From C:\Users\Public\Documents\ESTsoft\CreatorTemp\ipykernel_17156\2745053351.py:18: The name tf.train.GradientDescentOptimizer is deprecated. Please use tf.compat.v1.train.GradientDescentOptimizer instead.
-    
-    WARNING:tensorflow:From C:\Users\Public\Documents\ESTsoft\CreatorTemp\ipykernel_17156\2745053351.py:21: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
-    
+
     loss 값 : 18.254226684570312
     loss 값 : 4.129348278045654
     loss 값 : 2.5434889793395996
@@ -521,15 +513,6 @@ for step in range(5000):
         print(f'loss 값 : {loss_val}')
 ```
 
-    WARNING:tensorflow:From C:\Users\Public\Documents\ESTsoft\CreatorTemp\ipykernel_17156\2327548789.py:7: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
-    
-    WARNING:tensorflow:
-    The TensorFlow contrib module will not be included in TensorFlow 2.0.
-    For more information, please see:
-      * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-      * https://github.com/tensorflow/addons
-      * https://github.com/tensorflow/io (for I/O related ops)
-    If you depend on functionality not listed there, please file an issue.
     
     loss 값 : 5.908406734466553
     loss 값 : 0.34757450222969055
