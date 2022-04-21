@@ -1018,7 +1018,7 @@ import pandas as pd
 import tensorflow as tf
 from tensorflow.keras.models import Sequential      # keras model
 from tensorflow.keras.layers import Flatten, Dense  # Flatten(Input Layer)
-                                                     # Dense(Output Layer)
+                                                    # Dense(Output Layer)
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.optimizers import SGD
