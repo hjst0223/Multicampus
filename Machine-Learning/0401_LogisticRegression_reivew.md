@@ -167,7 +167,7 @@ plt.show()
 
 
 ## [[0.63265306]] => [[0.41831972]] 위보다 작아짐
-## => Linear Regression으로는 판단/분류 문제를 해결하기에는 무리가 있다.
+## => Linear Regression으로 판단/분류 문제를 해결하기에는 무리가 있다.
 
 # Logistic Regression을 3가지 형태로 구현하기 🤔
 - 간단한 Training Data Set 이용
