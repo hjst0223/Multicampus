@@ -302,7 +302,7 @@ model.fit(x_data, t_data)
 # prediction
 study_hour = np.array([[13]])  # 12시간 - 불합격, 14시간 - 합격
 result = model.predict(study_hour)  # 최종결과만 알려줌
-result_prob = model.predict_proba(study_hour)  # 합격/불합격 확률
+result_prob = model.predict_proba(study_hour)  # 불합격, 합격 확률
 print('합격 확률 : {}, 합격여부 : {}'.format(result_prob, result))
 
 # 0.49990609 => 0.5에 못 미침
