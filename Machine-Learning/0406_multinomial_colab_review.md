@@ -58,7 +58,7 @@ norm_test_x_data = scaler.transform(test_x_data)
 sess = tf.Session()
 
 onehot_train_t_data = sess.run(tf.one_hot(train_t_data, depth=3))  # depth는 class의 개수
-onehot_test_t_data = sess.run(tf.one_hot(test_t_data, depth=3))  # depth는 class의 개수
+onehot_test_t_data = sess.run(tf.one_hot(test_t_data, depth=3))
 
 # tensorflow graph 그리기
 X = tf.placeholder(shape=[None,2], dtype=tf.float32)
