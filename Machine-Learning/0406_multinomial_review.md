@@ -365,13 +365,6 @@ for step in range(10000):
         print('loss value : {}'.format(loss_val))
 ```
 
-    WARNING:tensorflow:From C:\Users\Public\Documents\ESTsoft\CreatorTemp\ipykernel_29596\2371570974.py:4: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
-    
-    WARNING:tensorflow:From C:\Users\Public\Documents\ESTsoft\CreatorTemp\ipykernel_29596\2371570974.py:10: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
-    
-    WARNING:tensorflow:From C:\Users\Public\Documents\ESTsoft\CreatorTemp\ipykernel_29596\2371570974.py:25: The name tf.train.GradientDescentOptimizer is deprecated. Please use tf.compat.v1.train.GradientDescentOptimizer instead.
-    
-    WARNING:tensorflow:From C:\Users\Public\Documents\ESTsoft\CreatorTemp\ipykernel_29596\2371570974.py:28: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
     
     loss value : 1.1495620012283325
     loss value : 0.5054112076759338
