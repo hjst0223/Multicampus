@@ -386,12 +386,12 @@ model.add(model_base)
 model.add(Flatten(input_shape=(4 * 4 * 512, )))  # 4차원 -> 2차원
 
 model.add(Dense(units=256,
-                            activation='relu'))
+                activation='relu'))
 
 model.add(Dropout(rate=0.5))
 
 model.add(Dense(units=1,
-                            activation='sigmoid'))
+                activation='sigmoid'))
 
 print(model.summary())
 ```
