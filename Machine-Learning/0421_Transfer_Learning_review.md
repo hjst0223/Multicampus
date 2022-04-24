@@ -287,27 +287,27 @@ train_dir = './data/kaggle/cat_dog_small/train'
 valid_dir = './data/kaggle/cat_dog_small/validation'
 
 train_datagen = ImageDataGenerator(rescale=1/255,
-                                                            rotation_range=30,
-                                                            width_shift_range=0.1,
-                                                            height_shift_range=0.1,
-                                                            zoom_range=0.2,
-                                                            horizontal_flip=True,
-                                                            vertical_flip=True,
-                                                            fill_mode='nearest')
+                                   rotation_range=30,
+                                   width_shift_range=0.1,
+                                   height_shift_range=0.1,
+                                   zoom_range=0.2,
+                                   horizontal_flip=True,
+                                   vertical_flip=True,
+                                   fill_mode='nearest')
 
 valid_datagen = ImageDataGenerator(rescale=1/255)
 
 train_generator = train_datagen.flow_from_directory(train_dir,
-                                                                                      classes=['cats', 'dogs'],
-                                                                                      target_size=(150, 150),
-                                                                                      batch_size=20,
-                                                                                      class_mode='binary')  # 다중 분류일 경우 'categorical'                                             
+                                                    classes=['cats', 'dogs'],
+                                                    target_size=(150, 150),
+                                                    batch_size=20,
+                                                    class_mode='binary')  # 다중 분류일 경우 'categorical'                                             
 
 valid_generator = valid_datagen.flow_from_directory(valid_dir,
-                                                                                      classes=['cats', 'dogs'],
-                                                                                      target_size=(150, 150),
-                                                                                      batch_size=20,
-                                                                                      class_mode='binary')  # 다중 분류일 경우 'categorical'                                             
+                                                    classes=['cats', 'dogs'],
+                                                    target_size=(150, 150),
+                                                    batch_size=20,
+                                                    class_mode='binary')  # 다중 분류일 경우 'categorical'                                             
 ```
 
     Found 2000 images belonging to 2 classes.
@@ -420,8 +420,8 @@ print(model.summary())
 
 ```python
 model.compile(optimizer=Adam(learning_rate=1e-4),
-                       loss='binary_crossentropy',
-                       metrics=['accuracy'])
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
 ```
 
 
@@ -431,11 +431,11 @@ from datetime import timedelta
 start = timer()
 
 history = model.fit(train_generator,
-                               steps_per_epoch=100,
-                               epochs=30,
-                               validation_data=valid_generator,
-                               validation_steps=50,
-                               verbose=2)
+                    steps_per_epoch=100,
+                    epochs=30,
+                    validation_data=valid_generator,
+                    validation_steps=50,
+                    verbose=2)
 
 model.save('./data/kaggle/cat_dog_small/transfer_learning_cnn_cat_dog_small.h5')
 
@@ -545,19 +545,19 @@ plt.show()
 
 ```python
 model.compile(optimizer=Adam(learning_rate=1e-4),
-                       loss='binary_crossentropy',
-                       metrics=['accuracy'])
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
 
 from timeit import default_timer as timer
 from datetime import timedelta
 start = timer()
 
 history = model.fit(train_generator,
-                               steps_per_epoch=100,
-                               epochs=100,
-                               validation_data=valid_generator,
-                               validation_steps=50,
-                               verbose=2)
+                    steps_per_epoch=100,
+                    epochs=100,
+                    validation_data=valid_generator,
+                    validation_steps=50,
+                    verbose=2)
 
 model.save('./data/kaggle/cat_dog_small/transfer_learning_cnn_cat_dog_small_epochs100.h5')
 
