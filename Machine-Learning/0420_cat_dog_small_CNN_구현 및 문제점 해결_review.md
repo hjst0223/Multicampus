@@ -351,13 +351,13 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
 
 # train_datagen = ImageDataGenerator(rescale=1/255)
-datagen = ImageDataGenerator(rotation_range=20,         # 최대 회전 각도 (0~20)
+datagen = ImageDataGenerator(rotation_range=20,       # 최대 회전 각도 (0~20)
                              width_shift_range=0.1,   # 가로 방향으로 이미지 이동시키기 (0~10%)
                              height_shift_range=0.5,  # 세로 방향으로 이미지 이동시키기 (0~50%) 
                              zoom_range=0.1,          # 10%의 비율로 확대/축소
-                             horizontal_flip=True,   # 좌우 반전 (True:허용)
-                             vertical_flip=True,     # 상하 반전 (True:허용)
-                             fill_mode='nearest')    # 이미지 보정
+                             horizontal_flip=True,    # 좌우 반전 (True:허용)
+                             vertical_flip=True,      # 상하 반전 (True:허용)
+                             fill_mode='nearest')     # 이미지 보정
 
 img = image.load_img('./data/kaggle/cat_dog_small/train/cats/cat.3.jpg',
                      target_size=(150, 150))
@@ -389,7 +389,7 @@ for i in range(20):
 idx = 0
 
 # Genreator를 이용해서 데이터 가져오기 - 증식
-for batch in datagen.flow(x, batch_size=1):      # x를 기반으로 데이터 1개 가져오기
+for batch in datagen.flow(x, batch_size=1):       # x를 기반으로 데이터 1개 가져오기
     ax[idx].imshow(image.array_to_img(batch[0]))  # numpy(pixel) 데이터 => 이미지 데이터
     idx += 1
     if idx == 20:
@@ -426,8 +426,8 @@ train_datagen = ImageDataGenerator(rescale=1/255,           # 정규화 포함
                                    width_shift_range=0.1,   # 가로 방향으로 이미지 이동시키기 (0~10%)
                                    height_shift_range=0.1,  # 세로 방향으로 이미지 이동시키기 (0~50%) 
                                    zoom_range=0.2,          # 10%의 비율로 확대/축소
-                                   horizontal_flip=True,   # 좌우 반전 (True:허용)
-                                   fill_mode='nearest')    # 이미지 보정
+                                   horizontal_flip=True,    # 좌우 반전 (True:허용)
+                                   fill_mode='nearest')     # 이미지 보정
 
 validation_datagen = ImageDataGenerator(rescale=1/255)  # 정규화 포함
 
@@ -653,8 +653,8 @@ train_datagen = ImageDataGenerator(rescale=1/255,           # 정규화 포함
                                    width_shift_range=0.1,   # 가로 방향으로 이미지 이동시키기 (0~10%)
                                    height_shift_range=0.1,  # 세로 방향으로 이미지 이동시키기 (0~50%) 
                                    zoom_range=0.2,          # 10%의 비율로 확대/축소
-                                   horizontal_flip=True,   # 좌우 반전 (True:허용)
-                                   fill_mode='nearest')    # 이미지 보정
+                                   horizontal_flip=True,    # 좌우 반전 (True:허용)
+                                   fill_mode='nearest')     # 이미지 보정
 
 validation_datagen = ImageDataGenerator(rescale=1/255)  # 정규화 포함
 
@@ -1007,7 +1007,7 @@ plt.show()
 from tensorflow.keras.applications import VGG16
 
 model_base = VGG16(weights='imagenet',  # 학습할 이미지 dataset
-                   include_top=True,   # classification 역할의 FC layer 포함 여부
+                   include_top=True,    # classification 역할의 FC layer 포함 여부
                                         # True: FC layer 포함
                    input_shape=(224, 224, 3))
 
@@ -1076,7 +1076,7 @@ print(model_base.summary())
 from tensorflow.keras.applications import VGG16
 
 model_base = VGG16(weights='imagenet',  # 학습할 이미지 dataset
-                   include_top=False,  # classification 역할의 FC layer 포함 여부
+                   include_top=False,   # classification 역할의 FC layer 포함 여부
                                         # False: covolution layer까지만 가져옴
                    input_shape=(150, 150, 3))
 
@@ -1208,7 +1208,7 @@ train_t_data = train_labels
 valid_x_data = np.reshape(valid_features, (1000, 4 * 4 * 512))  # 2차원
 valid_t_data = valid_labels
 
-test_x_data = np.reshape(test_features, (1000, 4 * 4 * 512))   # 2차원
+test_x_data = np.reshape(test_features, (1000, 4 * 4 * 512))    # 2차원
 test_t_data = test_labels
 
 from tensorflow.keras.models import Sequential
